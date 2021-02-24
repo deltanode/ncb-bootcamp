@@ -1,0 +1,75 @@
+html{
+    width: 100%;
+    background-color: #f5f7fa;
+}
+
+body{
+    width: 900px;
+    margin: 5px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+header{
+    background-color: #213159;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+}
+
+section{
+    background-color: #ffffff;
+    padding: 10px 0 10px 0;
+}
+
+fieldset{
+    margin: 10px 15px;
+    padding: 10px;
+}
+
+legend{
+    font-weight: bolder;
+}
+
+input[type="text"]{
+    margin: 5px 0;
+    width: 85%;
+}
+
+#submitSection{
+    padding-left: 15px;
+    width: 100%;
+    clear: both;
+}
+
+#submitButton{
+    background-color: #213159;
+    color: #ffffff;
+}
+fieldset div{
+    width: 48%;
+    margin: 5px;
+    float: left;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-100 input{
+    width: 765px;
+}
+
+.address{
+    width: 100%;
+}
+
+.address input{
+    width: 42%;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.address select{
+    width:14%;
+}

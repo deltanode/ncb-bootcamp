@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Data Form</title>
+    <link rel="stylesheet" href="./asset/css/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bio-Data Form</h1>
+    </header>
+    <section>
+        <form action="#" method="GET">
+            <fieldset>
+                <legend>Personal Details</legend>
+                <div>
+                    <label for="firstname">First Name</label><br>
+                    <input type="text" name="firstname" id="firstname">
+                </div>
+                <div>
+                    <label for="lastname">Last Name</label><br>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+                <div>
+                    <label for="age">Age</label><br>
+                    <input type="date" name="age" id="age" style="width: 57%;">
+                </div>
+                <div>
+                    <label for="gender">Gender</label><br>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                    <input type="text" name="" id="" style="width: 10px; visibility: hidden;">
+                </div>
+                <div>
+                    <label for="phone">Phone No.</label><br>
+                    <select name="extention" id="phoneExtension">
+                        <option value="+91">+91</option>
+                        <option value="+91">+365</option>
+                        <option value="+91">NA</option>
+                    </select>
+                    <input type="number" name="mob" id="mob" placeholder="9999999999">
+                </div>
+                <div>
+                    <label for="email">E-Mail</label><br>
+                    <input type="text" name="email" id="email" placeholder="demo@mail.com">
+                </div>
+
+                <div class="address">
+                    <label for="address">Address</label><br>
+                    <input type="text" name="address1" id="address1" placeholder="Floor/Flat No.">
+                    <input type="text" name="address2" id="address2" placeholder="Street/Location">
+                    <br>
+                    <input type="text" name="district" id="district" placeholder="District">
+                    <label for="state">State</label>
+                    <select name="state" id="state" style="margin-right: 16px;">
+                        <option value="Delhi NCR">Delhi NCR</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="country">Country</label>
+                    <select name="country" id="country">
+                        <option value="india">India</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Education Details</legend>
+                <div class="w-100">
+                    <label for="institite">Name of Institute</label><br>
+                    <input type="text" name="institite" id="institite" placeholder="Eg: ABC Public School">
+                </div>
+                <div class="w-100">
+                    <label for="board">Affiliated Board</label><br>
+                    <input type="text" name="board" id="board" placeholder="Eg: Central Board of Secondary Education">
+                </div>
+                <div>
+                    <label for="class">Class</label><br>
+                    <input type="text" name="class" id="class" placeholder="Eg: IX">
+                </div>
+                <div>
+                    <label for="stream">Stream</label><br>
+                    <input type="text" name="stream" id="stream" placeholder="Eg: Non Medical">
+                </div>
+                <div>
+                    <label for="document">Marksheet</label><br>
+                    <input type="file" name="document" id="document">
+                </div>
+            </fieldset>
+            <div style="width: 100%; clear: both;"></div>
+            <div id="submitSection">
+                <input type="checkbox" name="declaration" id="declaration" value="true">
+                <label for="declaration">I have verified all my details.</label> <br><br>
+                <input id="submitButton" type="submit" value="SUBMIT">
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
