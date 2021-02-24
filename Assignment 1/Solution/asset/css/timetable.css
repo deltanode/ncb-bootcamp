@@ -1,0 +1,34 @@
+html{
+    width: 100%;
+    background-color: #f5f7fa;
+}
+
+body{
+    margin: 5px auto;
+    width: 897px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+    padding: 10px 0;
+    background-color: #213159;
+    color: #ffffff;
+}
+
+section{
+    background-color: #ffffff;
+}
+
+table{
+    border: 1px solid grey;
+}
+
+td, th{
+    padding: 12px 24px;
+}
+
+.boldMe{
+    font-weight: bolder; 
+    text-align: center;
+}
