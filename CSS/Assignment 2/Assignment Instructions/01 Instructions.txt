@@ -1,0 +1,2 @@
+Instruction for the assignment
+• Create a Phone Directory using CSS (Position:Sticky)
