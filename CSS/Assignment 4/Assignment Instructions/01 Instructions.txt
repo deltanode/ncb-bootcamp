@@ -1,0 +1,2 @@
+Instruction for the assignment
+• Create a responsive webpage using HTML & CSS only.
