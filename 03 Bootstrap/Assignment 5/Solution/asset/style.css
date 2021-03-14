@@ -1,0 +1,25 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-link {
+  color: rgb(226, 223, 223) !important;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+}
+
+.home-text {
+  padding-top: 20%;
+}
+
+.home-image {
+  padding-top: 5%;
+}
+
+.home-text-center {
+  margin: 0 auto;
+}
