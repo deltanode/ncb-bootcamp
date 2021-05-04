@@ -6,18 +6,18 @@
         <div class="text-center my-3">
             <h2>Create Blog</h2>
         </div>
-        <form action="/blog/<%=blog._id%>?_method=PATCH" method="POST">
+        <form action="/blog/<%=blog._id%>?_method=PATCH" method="POST" class="needs-validation" novalidate>
             <div class="mb-3">
               <label for="title" class="form-label">Blog Title:</label>
-              <input type="text" class="form-control" id="title" name="title" value="<%=blog.title%>">
+              <input type="text" class="form-control" id="title" name="title" value="<%=blog.title%>" required>
             </div>
             <div class="mb-3">
               <label for="img" class="form-label">Image URL</label>
-              <input type="text" class="form-control" id="img" name="img" value="<%=blog.img%>">
+              <input type="text" class="form-control" id="img" name="img" value="<%=blog.img%>" required>
             </div>
             <div class="mb-3">
               <label for="content" class="form-label">Content</label>
-              <textarea name="content" id="content" cols="30" rows="10" class="form-control "> <%=blog.content%></textarea>
+              <textarea name="content" id="content" cols="30" rows="10" class="form-control" required> <%=blog.content%></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary">Update</button>

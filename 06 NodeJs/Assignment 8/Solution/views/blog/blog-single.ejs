@@ -41,16 +41,21 @@
                 <p class="pt-3"><%= blog.content %></p>
                 <!-- discussion-section -->
                 <div class="mt-5 pb-5 border-top border-dark-50">
-                    <h3 class="mt-5 mb-3 text-dark">Discussion</h3>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <h3 class="mt-5 mb-3 text-dark">Discussion</h3>
+                      <form action="/blog/<%= blog._id%>/comment" method="POST" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Email address</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter Name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="comment" class="form-label">Comments</label>
+                            <textarea class="form-control" id="comment" rows="3" name="comment" required></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
                 </div>
                 <!-- comment section -->
                 <div class="border-top">
