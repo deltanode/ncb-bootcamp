@@ -6,15 +6,13 @@ const router = require("./routers/router")
 const seedDB = require("./seed")
 
 mongoose
-    .connect('mongodb://localhost:27017/blogApp', {useNewUrlParser: true, useUnifiedTopology: true})
+    .connect('mongodb://localhost:27017/blogApp', {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify : false})
     .then(()=>{
         console.log("DB Connected")
     })
     .catch((err)=>{
         console.log("Connection Error: ",err)
     })
-
-
 
 const app = express()
 

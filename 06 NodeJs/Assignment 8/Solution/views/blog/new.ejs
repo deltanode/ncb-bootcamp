@@ -6,14 +6,14 @@
         <div class="text-center my-3">
             <h2>Create Blog</h2>
         </div>
-        <form>
+        <form action="/blog" method="POST">
             <div class="mb-3">
               <label for="title" class="form-label">Blog Title:</label>
-              <input type="email" class="form-control" id="title" aria-describedby="emailHelp">
+              <input type="text" class="form-control" id="title" name="title">
             </div>
             <div class="mb-3">
               <label for="img" class="form-label">Image URL</label>
-              <input type="password" class="form-control" id="img">
+              <input type="text" class="form-control" id="img" name="img">
             </div>
             <div class="mb-3">
               <label for="content" class="form-label">Content</label>

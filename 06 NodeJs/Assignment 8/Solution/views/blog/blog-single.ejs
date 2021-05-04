@@ -23,29 +23,22 @@
             </div>
             <!-- sidebar ends -->
             <div class="col-lg-7 bg-white shadow p-5 mb-5 bg-body rounded" style="z-index:1;">
-                <h1 class="mb-3">Hostinger Now Offers Google Workspace</h1>
+                <h1 class="mb-3"><%= blog.title %></h1>
                 <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Varun Sharma</a></li>
                       <li class="breadcrumb-item active" aria-current="page">November 03, 2020</li>
                       <li class="breadcrumb-item active" aria-current="page">2 min Read</li>
+                      <li class="breadcrumb-item"><a href="/blog/<%= blog._id %>/edit" class="btn btn-outline-primary text-decoration-none">Edit</a></li>
+                      <li class="breadcrumb-item">
+                          <form action="/blog/<%= blog._id %>?_method=DELETE" method="POST">
+                              <button class="btn btn-danger">Delete</button>
+                          </form>
+                      </li>
                     </ol>
                 </nav>
-                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--EcOqKNmk--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jcpguixf6hzqttgidrru.png" class="card-img-top" alt="...">
-                <p class="pt-3">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure beatae vel sequi neque, consequatur numquam harum doloremque provident veritatis, officia ratione, veniam sint perferendis aspernatur dolorum blanditiis magni consequuntur.
-                    Delectus aut quam ea dolorem aperiam illo officiis in earum blanditiis voluptates, sunt iste consectetur suscipit nulla perferendis voluptatum adipisci eveniet, debitis aspernatur alias dolore labore voluptatem! Mollitia, quaerat dolor.
-                    Fuga unde rem at voluptatibus quod necessitatibus corrupti earum obcaecati? Nisi illum accusamus voluptates aliquam nostrum molestias animi, quo reprehenderit natus aperiam, vel veritatis, nesciunt vitae delectus culpa ratione expedita!
-                    Neque voluptate reprehenderit dolores fugiat quidem ex culpa facere. Molestias ab officiis recusandae explicabo quis laborum consequuntur tempora molestiae? Natus rerum, amet nemo accusamus deleniti adipisci quibusdam earum ut ratione.
-                    Culpa, sequi nobis incidunt temporibus suscipit porro tempora quas ex at nostrum deserunt, reprehenderit optio accusantium rem dolorum facilis soluta quisquam excepturi asperiores minus itaque repudiandae qui a. Consequatur, ullam?
-                    Eius, sint a odio quo labore tempora, alias dolorem explicabo expedita nulla doloribus quos exercitationem quam dolorum laboriosam quasi natus consequatur excepturi veritatis? Officiis, nesciunt vel nisi vitae accusantium quibusdam.
-                    Temporibus, dolorum aliquam? Eum dicta, eius ut incidunt eligendi laboriosam repudiandae eaque sapiente! Neque commodi, repellendus totam ullam repellat vitae eum facere minus dolorem corrupti laudantium ratione quidem temporibus aliquid.
-                    Exercitationem aliquid asperiores, fugiat tempora consectetur, dolorum maxime iste inventore commodi excepturi perspiciatis vero odit sequi reiciendis? Ullam mollitia possimus molestiae. Quam quaerat iste laboriosam saepe iusto accusamus eligendi ab!
-                    Rem, omnis? Temporibus rerum sit omnis placeat! Alias corrupti maiores consequatur praesentium nesciunt debitis harum, commodi, porro cumque perspiciatis nisi velit reprehenderit voluptatum! Aliquam aut vitae doloremque non, cumque sapiente?
-                    Cumque quaerat quidem magni voluptate blanditiis error, qui minus beatae dolor dolore, debitis non neque voluptatibus doloremque deleniti voluptatum accusamus provident repellendus, sequi unde laudantium eveniet officiis placeat iure. Fugit!
-                    Culpa labore blanditiis hic iure molestiae, corporis dolorum voluptates sunt doloremque, tempore consectetur mollitia eligendi libero unde veritatis, architecto a repellendus! Veritatis et, ipsum ad libero laudantium exercitationem ut repellendus?
-                    Amet, illum! Alias voluptatum quam quia impedit inventore, neque praesentium laborum, quae architecto minima eligendi assumenda nemo dolor amet harum maxime incidunt asperiores autem consequatur dolore? Ea eligendi labore dignissimos?
-                </p>
+                <img src="<%= blog.img %>" class="card-img-top" alt="...">
+                <p class="pt-3"><%= blog.content %></p>
                 <!-- discussion-section -->
                 <div class="mt-5 pb-5 border-top border-dark-50">
                     <h3 class="mt-5 mb-3 text-dark">Discussion</h3>
