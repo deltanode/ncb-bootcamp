@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+<!-- main start -->
+<section class="bg-white my-5 py-3">
+    <div class="container w-50 m-auto ">
+        <div class="text-center my-3">
+            <h2>Create Blog</h2>
+        </div>
+        <form>
+            <div class="mb-3">
+              <label for="title" class="form-label">Blog Title:</label>
+              <input type="email" class="form-control" id="title" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="img" class="form-label">Image URL</label>
+              <input type="password" class="form-control" id="img">
+            </div>
+            <div class="mb-3">
+              <label for="content" class="form-label">Content</label>
+              <textarea name="content" id="content" cols="30" rows="10" class="form-control "></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</section>
+<!-- main end -->
+<%- include('../partials/footer') %>
