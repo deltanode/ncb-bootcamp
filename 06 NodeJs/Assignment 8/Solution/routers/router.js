@@ -53,14 +53,16 @@ router.delete("/blog/:id",async(req,res)=>{
 
 // Added comment on post
 router.post("/blog/:id/comment",async (req,res)=>{
-    const blog = await Blog.findById(req.params.id)
-    const comment = new Comment(req.body) 
-    blog.comments.push(comment)
+    // const blog = await Blog.findById(req.params.id)
+    // const comment = new Comment(req.body) 
+    // blog.comments.push(comment)
     
-    await blog.save()
-    await comment.save()
+    // await blog.save()
+    // await comment.save()
 
-    // console.log(product)
+    const comment = await Comment.create(req.body)
+    const blog = await Blog.findByIdAndUpdate(req.params.id, {$push: {comments: comment._id}})
+    // console.log(comment, blog)
 
     res.redirect(`/blog/${req.params.id}`)
 })
