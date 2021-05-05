@@ -1,5 +1,6 @@
 const express = require("express")
 const Blog = require("../models/blog")
+const Comment = require("../models/comment")
 const router = express.Router()
 
 // landing page
@@ -27,7 +28,8 @@ router.post("/blog", async (req,res)=>{
 
 // View single blog
 router.get("/blog/:id", async (req,res)=>{
-    const blog = await Blog.findById(req.params.id)
+    const blog = await Blog.findById(req.params.id).populate("comments")
+    // console.log(blog)
     res.render("blog/blog-single",{blog})
 })
 
@@ -49,5 +51,18 @@ router.delete("/blog/:id",async(req,res)=>{
     res.redirect("/blog")
 })
 
+// Added comment on post
+router.post("/blog/:id/comment",async (req,res)=>{
+    const blog = await Blog.findById(req.params.id)
+    const comment = new Comment(req.body) 
+    blog.comments.push(comment)
+    
+    await blog.save()
+    await comment.save()
+
+    // console.log(product)
+
+    res.redirect(`/blog/${req.params.id}`)
+})
 
 module.exports = router
